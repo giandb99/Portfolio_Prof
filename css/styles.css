@@ -1,0 +1,268 @@
+:root {
+    --primario: rgb(234, 205, 178);
+    --blanco: #fff;
+    --negro: #000;
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+body {
+    width: 100%;
+    background-image: url("/img/hero.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+/** CREACION DE ICONOS FLOTANTES **/
+
+
+#checkbox__main {
+    display: none;
+}
+
+.contenedor {
+    position: fixed;
+    bottom: 1.5rem;
+    left: 1.5rem;
+}
+
+.redes a, .icon-mas {
+    display: block;
+    text-decoration: none;
+    color: var(--primario);
+    width: 3rem;
+    height: 3rem;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
+    transition: all 500ms ease;
+    font-size: 1.4rem;
+    margin: 0 auto;
+}
+
+.redes a:hover {
+    color: rgb(219, 103, 26);
+    background-color: rgb(234, 205, 178, 0.2);
+}
+
+.redes a {
+    margin: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+#checkbox__main:checked~ .redes a {
+    margin-bottom: 10px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.icon-mas:hover {
+    color: rgb(219, 103, 26);
+    background-color: rgb(234, 205, 178, 0.2);
+}
+
+.icon-mas {
+    cursor: pointer;
+    font-size: 1.5rem;
+    line-height: 52px;
+}
+
+
+/** CREACION ENCABEZADO **/
+
+
+.header {
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.menu {
+    float: right;
+    line-height: 7rem;
+    margin-right: 4%;
+}
+
+.menu a {
+    display: inline-block;
+    padding: 1rem;
+    line-height: normal;
+    text-decoration: none;
+    color: var(--primario);
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.menu a:hover {
+    border-bottom: 2px solid var(--primario)
+}
+
+
+/** CREACION CONTENIDO **/
+
+
+.titulo {
+    font-size: 2rem;
+    color: var(--primario);
+    text-align: center;
+    margin: 12rem auto 9rem auto;
+    text-shadow: 0.3rem 0.3rem 0.3rem var(--negro);
+}
+
+.texto {
+    color: var(--primario);
+    width: 50%;
+    text-align: center;
+    text-shadow: 0.3rem 0.3rem 0.3rem var(--negro);
+    margin: 0 auto;
+    font-size: 1.3rem;
+}
+
+
+/** CREACION DE PROYECTO **/
+
+
+.caja__proyectos {
+    width: 90%;
+    height: 40rem;
+    margin: 10rem auto;
+    box-shadow: 0.3rem 0.3rem 3rem var(--negro);
+    text-align: center;
+}
+
+.caja__proyectos h2 {
+    padding: 2rem;
+    font-size: 2.5rem;
+    font-family: 'Josefin Sans';
+    color: var(--primario);
+    font-weight: 700;
+    text-shadow: 0.3rem 0.3rem 0.3rem var(--negro);
+}
+
+.proyectos {
+    display: flex;
+    flex-direction: row;
+    margin: 5rem auto;
+    justify-content: center;
+}
+
+.proyecto {
+    width: 30%;
+    border-radius: 1rem;
+    justify-content: center;
+}
+
+.proyecto img {
+    height: 13rem;
+    width: 80%;
+    border-radius: 1rem;
+    cursor: pointer;
+}
+
+.proyecto:hover {
+    transform: scale(1.2);
+    transition: .5s;
+}
+
+.proyecto .subtitulo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 1rem;
+    color: var(--primario);
+    text-shadow: 0.3rem 0.3rem 0.3rem var(--negro);
+}
+
+.proyecto .subtitulo:hover {
+    transform: scale(1.2);
+    transition: .3s;
+}
+
+/** CREACION DE CONTACTO **/
+
+
+.caja {
+    margin: 10rem 20rem;
+}
+
+.formulario {
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem;
+    box-shadow: 0.3rem 0.3rem 3rem var(--negro);
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    color: var(--primario);
+    text-shadow: 0.3rem 0.3rem 0.3rem var(--negro);
+    border-bottom: 2px solid var(--primario);
+}
+
+.campo {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.campo__fila {
+    display: flex;
+    margin-bottom: 30px;
+    gap: 5rem;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primario);
+    text-shadow: 0.3rem 0.3rem 0.3rem var(--negro);
+}
+
+.campo textarea {
+    height: 5rem;
+    color: var(--primario);
+    resize: vertical;
+    min-height: 5rem;
+    max-height: 20rem;
+    border: 2px solid var(--primario);
+}
+
+.input-text {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-bottom: 2px solid var(--primario);
+    color: var(--primario);
+    background: transparent;
+    font-size: 1rem;
+}
+
+.campo__boton .boton {
+    border: none;
+    padding: 1rem;
+    color: var(--primario);
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: .5rem;
+    text-shadow: 0.3rem 0.3rem 0.3rem var(--negro);
+    background-color: rgb(234, 205, 178, 0.3);
+    text-align: right;
+}
