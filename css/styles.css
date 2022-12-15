@@ -1,14 +1,23 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+    
+*,*:before, *:after {
+    box-sizing: inherit;
+}
+
 :root {
     --primario: rgb(234, 205, 178);
     --blanco: #fff;
     --negro: #000;
+    --fontFamily: 'Josefin Sans', sans-serif;
 }
 
 * {
     margin: 0%;
     padding: 0%;
-    box-sizing: border-box;
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: var(--fontFamily)
 }
 
 body {
@@ -29,22 +38,22 @@ body {
 
 .contenedor {
     position: fixed;
-    bottom: 1.5rem;
-    left: 1.5rem;
+    bottom: 3rem;
+    left: 3rem;
 }
 
 .redes a, .icon-mas {
     display: block;
     text-decoration: none;
     color: var(--primario);
-    width: 3rem;
-    height: 3rem;
-    line-height: 50px;
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
     text-align: center;
     border-radius: 50%;
-    box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
+    box-shadow: 0 .1rem 1rem rgba(0,0,0,0.5);
     transition: all 500ms ease;
-    font-size: 1.4rem;
+    font-size: 3rem;
     margin: 0 auto;
 }
 
@@ -60,7 +69,7 @@ body {
 }
 
 #checkbox__main:checked~ .redes a {
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
     opacity: 1;
     visibility: visible;
 }
@@ -72,8 +81,8 @@ body {
 
 .icon-mas {
     cursor: pointer;
-    font-size: 1.5rem;
-    line-height: 52px;
+    font-size: 3rem;
+    line-height: 5.2rem;
 }
 
 
@@ -96,17 +105,17 @@ body {
 
 .menu a {
     display: inline-block;
-    padding: 1rem;
+    padding: 2rem;
     line-height: normal;
     text-decoration: none;
     color: var(--primario);
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
-    border-bottom: 2px solid transparent;
+    font-size: 2.5rem;
+    transition: all .3s ease;
+    border-bottom: .2rem solid transparent;
 }
 
 .menu a:hover {
-    border-bottom: 2px solid var(--primario)
+    border-bottom: .2rem solid var(--primario)
 }
 
 
@@ -114,20 +123,51 @@ body {
 
 
 .titulo {
-    font-size: 2rem;
-    color: var(--primario);
-    text-align: center;
-    margin: 12rem auto 9rem auto;
-    text-shadow: 0.3rem 0.3rem 0.3rem var(--negro);
+    font-size: 3.5rem;
+   
 }
 
 .texto {
+    font-size: 2.3rem;
+    line-height: 3rem;
+}
+
+.titulo,
+.texto {
     color: var(--primario);
-    width: 50%;
+    margin: 2rem;
+}
+
+.presentacion,
+.sobre_mi {
+    width: 55%;
+    padding: 4rem;
+    margin: 22rem auto 9rem auto;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 1rem;
+    box-shadow: 0.3rem 0.3rem 3rem var(--negro);
+    text-shadow: 0.3rem 0.3rem 0.3rem var(--negro);
+}
+
+
+/** CREACION SECCION SOBRE MI **/
+
+
+.imagen_sobre_mi img{
+    width: 20rem;
+    height: 20rem;
+    border-radius: 50%;
+}
+
+.info_sobre_mi {
+    color: var(--primario);
+    font-size: 2.3rem;
+    margin: 4rem auto;
     text-align: center;
     text-shadow: 0.3rem 0.3rem 0.3rem var(--negro);
-    margin: 0 auto;
-    font-size: 1.3rem;
+    line-height: 3rem;
 }
 
 
@@ -136,15 +176,16 @@ body {
 
 .caja__proyectos {
     width: 90%;
-    height: 40rem;
-    margin: 10rem auto;
+    height: 50rem;
+    margin: 22rem auto;
     box-shadow: 0.3rem 0.3rem 3rem var(--negro);
     text-align: center;
+    border-radius: 1.5rem
 }
 
 .caja__proyectos h2 {
     padding: 2rem;
-    font-size: 2.5rem;
+    font-size: 3rem;
     font-family: 'Josefin Sans';
     color: var(--primario);
     font-weight: 700;
@@ -154,18 +195,16 @@ body {
 .proyectos {
     display: flex;
     flex-direction: row;
-    margin: 5rem auto;
+    margin: 8rem auto;
     justify-content: center;
 }
 
 .proyecto {
     width: 30%;
-    border-radius: 1rem;
-    justify-content: center;
 }
 
 .proyecto img {
-    height: 13rem;
+    height: 17rem;
     width: 80%;
     border-radius: 1rem;
     cursor: pointer;
@@ -177,7 +216,7 @@ body {
 }
 
 .proyecto .subtitulo {
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 700;
     padding: 1rem;
     color: var(--primario);
@@ -197,10 +236,10 @@ body {
 }
 
 .formulario {
-    width: 100%;
-    margin: 0 auto;
+    margin: 22rem auto;
     padding: 2rem;
     box-shadow: 0.3rem 0.3rem 3rem var(--negro);
+    border-radius: 1.5rem
 }
 
 .formulario fieldset {
@@ -208,12 +247,12 @@ body {
 }
 
 .formulario legend {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 3rem;
     color: var(--primario);
-    text-shadow: 0.3rem 0.3rem 0.3rem var(--negro);
-    border-bottom: 2px solid var(--primario);
+    text-shadow: .3rem .3rem .3rem var(--negro);
+    border-bottom: .2rem solid var(--primario);
 }
 
 .campo {
@@ -223,14 +262,14 @@ body {
 
 .campo__fila {
     display: flex;
-    margin-bottom: 30px;
+    margin-bottom: 3rem;
     gap: 5rem;
 }
 
 .campo label {
     display: block;
     margin-bottom: .5rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
     color: var(--primario);
     text-shadow: 0.3rem 0.3rem 0.3rem var(--negro);
@@ -242,14 +281,14 @@ body {
     resize: vertical;
     min-height: 5rem;
     max-height: 20rem;
-    border: 2px solid var(--primario);
+    border: .2rem solid var(--primario);
 }
 
 .input-text {
     width: 100%;
     padding: 1rem;
     border: none;
-    border-bottom: 2px solid var(--primario);
+    border-bottom: .2rem solid var(--primario);
     color: var(--primario);
     background: transparent;
     font-size: 1rem;
@@ -259,7 +298,7 @@ body {
     border: none;
     padding: 1rem;
     color: var(--primario);
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 700;
     border-radius: .5rem;
     text-shadow: 0.3rem 0.3rem 0.3rem var(--negro);
