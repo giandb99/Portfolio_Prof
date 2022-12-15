@@ -236,8 +236,9 @@ body {
 }
 
 .formulario {
+    width: 80%;
     margin: 22rem auto;
-    padding: 2rem;
+    padding: 4rem;
     box-shadow: 0.3rem 0.3rem 3rem var(--negro);
     border-radius: 1.5rem
 }
