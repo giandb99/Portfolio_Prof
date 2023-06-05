@@ -1,0 +1,24 @@
+{
+  "Proyectos": [
+    {
+      "titulo": "Freelancer DAM",
+      "imagen": "img/giandb99.github.io_portfolio_.jpg",
+      "enlace": "https://giandb99.github.io/portfolio/"
+    },
+    {
+      "titulo": "Codigo QR",
+      "imagen": "img/giandb99.github.io_proyecto-QR_.jpg",
+      "enlace": "https://giandb99.github.io/proyecto-QR/"
+    },
+    {
+      "titulo": "Producto FEM",
+      "imagen": "img/giandb99.github.io_femproduct_.jpg",
+      "enlace": "https://giandb99.github.io/femproduct/"
+    },
+    {
+      "titulo": "Suscripción",
+      "imagen": "img/giandb99.github.io_single-price-grid-component-master_.png",
+      "enlace": "https://giandb99.github.io/single-price-grid-component-master/"
+    }
+  ]
+}

@@ -2,11 +2,9 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="icon" type="image/png" sizes="32x32" href="img/logo2.jpg">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="stylesheet" href="css/fontello.css">
-    <link rel="stylesheet" type ="text" href="contact.html">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gianfranco Lombardo</title>
@@ -16,7 +14,6 @@
     <header class="header">
         <nav class="menu">
             <a href="index.html">Inicio</a>
-            <a href="about.html">Sobre Mí</a>
             <a href="projects.html">Proyectos</a>
             <a href="contact.html">Contacto</a>
         </nav>
@@ -36,33 +33,33 @@
     </div>
     
     <section class="caja">
-        <form class="formulario">
+        <form class="formulario" id="formulario" onsubmit="validarFormulario()">
             <fieldset>
                 <legend>Contacto</legend>
                 
                 <div class="contenedor-campos">
                     <div class="campo__fila">
                         <div class="campo">
-                            <label>Nombre</label>
-                            <input class="input-text" type="text" required="">
+                            <label for="nombre">Nombre</label>
+                            <input class="input-text" type="text" id="nombre" name="nombre">
                         </div>
                         <div class="campo">
-                            <label>Telefono</label>
-                            <input class="input-text" type="tel" required="">
-                        </div>
-                    </div>
-
-                    <div class="campo__fila">
-                        <div class="campo">
-                            <label>Correo</label>
-                            <input class="input-text" type="email" required="">
+                            <label for="telefono">Telefono</label>
+                            <input class="input-text" type="tel" id="telefono" name="telefono">
                         </div>
                     </div>
 
                     <div class="campo__fila">
                         <div class="campo">
-                            <label>Mensaje</label>
-                            <textarea class="input-text" required=""></textarea>
+                            <label for="correo">Correo</label>
+                            <input class="input-text" type="email" id="correo" name="correo">
+                        </div>
+                    </div>
+
+                    <div class="campo__fila">
+                        <div class="campo">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea class="input-text" id="mensaje" name="mensaje"></textarea>
                         </div>
                     </div>
 
@@ -76,6 +73,8 @@
             </fieldset>
         </form>
     </section>
+
+    <script src="js/contact.js"></script>
 
 </body>
 </html>
