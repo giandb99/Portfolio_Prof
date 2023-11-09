@@ -8,7 +8,8 @@ html {
 }
 
 :root {
-    --primario: rgb(234, 205, 178);
+    --primario: #dae2cb;
+    --secundario: #6cb6a5;
     --blanco: #fff;
     --negro: #000;
     --fontFamily: 'Josefin Sans', sans-serif;
@@ -22,7 +23,7 @@ html {
 
 body {
     width: 100%;
-    background-image: url("../img/hero4.png");
+    background-image: url("../img/bg.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -57,8 +58,9 @@ body {
     margin: 0 auto;
 }
 
-.redes a:hover {
-    color: rgb(219, 103, 26);
+.redes a:hover,
+.icon-mas:hover {
+    color: var(--secundario);
     background-color: rgb(234, 205, 178, 0.2);
 }
 
@@ -72,11 +74,6 @@ body {
     margin-bottom: 1rem;
     opacity: 1;
     visibility: visible;
-}
-
-.icon-mas:hover {
-    color: rgb(219, 103, 26);
-    background-color: rgb(234, 205, 178, 0.2);
 }
 
 .icon-mas {
@@ -154,7 +151,7 @@ body {
     width: 20rem;
     height: 20rem;
     border-radius: 50%;
-    border: 0.3rem solid rgba(255, 255, 255, 0.6);
+    border: 0.3rem solid var(--primario);
 }
 
 .animacion {
@@ -176,7 +173,6 @@ body {
 
 .caja__proyectos {
     width: 90%;
-    height: 50rem;
     margin: 22rem auto;
     box-shadow: 0.3rem 0.3rem 3rem var(--negro);
     text-align: center;
@@ -193,20 +189,22 @@ body {
 }
 
 .proyectos {
-    display: flex;
-    flex-direction: row;
-    margin: 8rem auto;
-    justify-content: center;
+    display: grid;
+    margin: 5rem auto auto auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    padding: 1rem;
+    justify-items: center;
 }
 
 .proyectos article{
-    width: 30%;
+    width: 100%;
 }
 
 .proyectos img {
     height: 18rem;
-    width: 75%;
-    margin-top: 1.5rem;
+    width: 55%;
+    margin: 2rem auto;
     border-radius: 1rem;
     cursor: pointer;
 }
@@ -275,7 +273,6 @@ body {
 
 .campo textarea {
     height: 5rem;
-    color: var(--primario);
     resize: vertical;
     min-height: 5rem;
     max-height: 20rem;
@@ -287,12 +284,16 @@ body {
     padding: 1rem;
     border: none;
     border-bottom: .2rem solid var(--primario);
-    color: var(--primario);
     background: transparent;
     font-size: 2rem;
 }
 
-.campo__boton .boton {
+.campo textarea,
+.input-text {
+    color: var(--primario);
+}
+
+.boton {
     border: none;
     padding: 1rem;
     color: var(--primario);
@@ -303,4 +304,8 @@ body {
     background-color: rgb(234, 205, 178, 0.3);
     text-align: right;
     cursor: pointer;
+}
+
+.boton:hover{
+    transform: scale(1.1);
 }
